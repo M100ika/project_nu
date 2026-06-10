@@ -1,0 +1,66 @@
+refs_all = [
+    # --- Стандарты и регуляторика ---
+    ("[1]",  "ISO 45001:2018. Occupational health and safety management systems.",
+     "https://www.iso.org/standard/63787.html", ""),
+    ("[2]",  "HSE. Working Alone: Health and Safety Guidance. UK HSE, 2013.",
+     "https://polfed.org/dcp/media/1260/alone.pdf", ""),
+    ("[3]",  "NSC Work to Zero. «Using Lone Worker Monitoring Technology to Protect Workers». NSC, 2023.",
+     "https://www.nsc.org/getmedia/c2ab538c-8464-48cd-bf90-e1601f466bd5/wtz-lone-down-worker-monitoring-wp.pdf", ""),
+
+    # --- WiFi-CSI сенсинг ---
+    ("[4]",  "Geng J., Huang D., De la Torre F. «DensePose From WiFi». arXiv:2301.00250. CMU, Jan 2023.",
+     "https://arxiv.org/abs/2301.00250", ""),
+    ("[5]",  "Strohmayer J., Kampel M. «WiFi CSI-Based Long-Range Through-Wall Human Activity Recognition "
+     "with the ESP32». ICVS 2023, LNCS 14253, Springer. DOI: 10.1007/978-3-031-44137-0_4.",
+     "https://doi.org/10.1007/978-3-031-44137-0_4", ""),
+    ("[6]",  "Wang W. et al. «WiFi-based non-contact human presence detection technology». "
+     "Sci Rep 14, 3896 (2024). DOI: 10.1038/s41598-024-54077-x.",
+     "https://doi.org/10.1038/s41598-024-54077-x", ""),
+    ("[7]",  "Wang Y., Wu K., Ni L.M. «WiFall: Device-Free Fall Detection by Wireless Networks». "
+     "IEEE Trans. Mobile Computing, 16(2), 2017. DOI: 10.1109/TMC.2016.2557792.",
+     "https://doi.org/10.1109/TMC.2016.2557792", ""),
+    ("[8]",  "Restuccia F. «IEEE 802.11bf: Toward Ubiquitous Wi-Fi Sensing». arXiv:2103.14918, 2021.",
+     "https://arxiv.org/abs/2103.14918", ""),
+
+    # --- NILM и энергомониторинг ---
+    ("[9]",  "Hart G.W. «Nonintrusive Appliance Load Monitoring». Proc. IEEE, 80(12):1870–1891, 1992. "
+     "DOI: 10.1109/5.192069.",
+     "https://doi.org/10.1109/5.192069", ""),
+    ("[10]", "Angelis G.F. et al. «NILM Applications». Energies 2022, 15(6), 2049. DOI: 10.3390/en15062049.",
+     "https://doi.org/10.3390/en15062049", ""),
+
+    # --- Occupancy-управление и среда ---
+    ("[11]", "Mirakhorli A., Dong B. «Occupancy behavior based model predictive control for building "
+     "indoor climate». Energy Build. 129 (2016). DOI: 10.1016/j.enbuild.2016.07.036.",
+     "https://doi.org/10.1016/j.enbuild.2016.07.036", ""),
+    ("[12]", "Chen Z. et al. «Occupancy-based HVAC control systems in buildings: A state-of-the-art review». "
+     "Build. Environ. 197 (2021). DOI: 10.1016/j.buildenv.2021.107810.",
+     "https://doi.org/10.1016/j.buildenv.2021.107810", ""),
+    ("[13]", "Satish U. et al. «Is CO2 an Indoor Pollutant? Direct Effects of Low-to-Moderate CO2 "
+     "Concentrations on Human Decision-Making Performance». Environ. Health Perspect. 120(12), 2012. "
+     "DOI: 10.1289/ehp.1104789.",
+     "https://doi.org/10.1289/ehp.1104789", ""),
+
+    # --- TinyML / AI на edge ---
+    ("[14]", "David R. et al. «TensorFlow Lite Micro: Embedded Machine Learning on TinyML Systems». "
+     "arXiv:2010.08678.",
+     "https://arxiv.org/abs/2010.08678", ""),
+    ("[15]", "Banbury C. et al. «MLPerf Tiny Benchmark». arXiv:2106.07597.",
+     "https://arxiv.org/abs/2106.07597", ""),
+
+    # --- Open-source проекты и аппаратная документация ---
+    ("[16]", "ruvnet/RuView. WiFi-сенсинг на ESP32. GitHub.",
+     "https://github.com/ruvnet/RuView", ""),
+    ("[17]", "espressif/esp-csi. Official ESP CSI SDK. GitHub.",
+     "https://github.com/espressif/esp-csi", ""),
+    ("[18]", "Hernandez S.M. et al. ESP32-CSI-Tool. GitHub, 2020–2024.",
+     "https://github.com/StevenMHernandez/ESP32-CSI-Tool", ""),
+    ("[19]", "openenergymonitor/EmonLib. Energy Monitoring Library. GitHub.",
+     "https://github.com/openenergymonitor/EmonLib", ""),
+    ("[20]", "Savjee/home-energy-monitor. ESP32 + SCT-013 + EmonLib. GitHub.",
+     "https://github.com/Savjee/home-energy-monitor", ""),
+    ("[21]", "OpenEnergyMonitor. YHDC SCT-013 CT Sensor Report.",
+     "https://docs.openenergymonitor.org/electricity-monitoring/ct-sensors/yhdc-sct-013-000-ct-sensor-report.html", ""),
+    ("[22]", "Hi-Link. HLK-LD2410 24GHz Human Presence Radar. Производитель.",
+     "https://www.hlktech.net", ""),
+]
