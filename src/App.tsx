@@ -31,10 +31,11 @@ import DashboardView from './components/DashboardView';
 import Lab204View from './components/Lab204View';
 import StatsView from './components/StatsView';
 import DevicesView from './components/DevicesView';
+import SecurityView from './components/SecurityView';
 
 export default function App() {
   // Navigation State
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'facilities' | 'stats' | 'devices'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'facilities' | 'stats' | 'devices' | 'security'>('dashboard');
   
   // Application Shared state
   const [rooms, setRooms] = useState<Room[]>(initialRooms);
@@ -223,7 +224,7 @@ export default function App() {
             >
               STATS
             </button>
-            <button 
+            <button
               id="nav-link-devices"
               onClick={() => setActiveTab('devices')}
               className={`px-4 py-2 text-xs font-bold tracking-widest uppercase transition-all duration-200 rounded-xl ${
@@ -233,6 +234,17 @@ export default function App() {
               }`}
             >
               DEVICES
+            </button>
+            <button
+              id="nav-link-security"
+              onClick={() => setActiveTab('security')}
+              className={`px-4 py-2 text-xs font-bold tracking-widest uppercase transition-all duration-200 rounded-xl ${
+                activeTab === 'security'
+                  ? 'text-white bg-cyan-500/20 border border-cyan-400/30 shadow-[0_0_15px_rgba(6,182,212,0.15)]'
+                  : 'text-white/60 hover:text-white hover:bg-white/5'
+              }`}
+            >
+              PATROL
             </button>
           </nav>
 
@@ -288,10 +300,18 @@ export default function App() {
         )}
 
         {activeTab === 'devices' && (
-          <DevicesView 
+          <DevicesView
             initialNodes={fleetNodes}
             onAddNewNode={handleAddNewNode}
             onBulkSync={handleFleetBulkSync}
+          />
+        )}
+
+        {activeTab === 'security' && (
+          <SecurityView
+            rooms={rooms}
+            incidents={incidents}
+            auditLogs={auditLogs}
           />
         )}
       </main>
@@ -328,7 +348,7 @@ export default function App() {
           <FileCheck className="h-4 w-4" />
           <span className="text-[10px] mt-0.5 tracking-wide font-semibold">Stats</span>
         </button>
-        <button 
+        <button
           id="mobile-nav-devices"
           onClick={() => setActiveTab('devices')}
           className={`flex flex-col items-center p-2 rounded-xl transition-all ${
@@ -337,6 +357,16 @@ export default function App() {
         >
           <Cpu className="h-4 w-4" />
           <span className="text-[10px] mt-0.5 tracking-wide font-semibold">Devices</span>
+        </button>
+        <button
+          id="mobile-nav-security"
+          onClick={() => setActiveTab('security')}
+          className={`flex flex-col items-center p-2 rounded-xl transition-all ${
+            activeTab === 'security' ? 'text-cyan-400 scale-102 font-bold bg-cyan-500/10 border border-cyan-500/20' : 'text-white/50'
+          }`}
+        >
+          <Shield className="h-4 w-4" />
+          <span className="text-[10px] mt-0.5 tracking-wide font-semibold">Patrol</span>
         </button>
       </nav>
 
